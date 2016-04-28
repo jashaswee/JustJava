@@ -24,8 +24,7 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(quantity*5);}
-
+        displayMessage("Total Cost: " + (("Rs " + quantity*5)) + "\nThank You :D D");}
 
     public void increment(View view) {
         quantity++;
@@ -46,11 +45,21 @@ public class MainActivity extends ActionBarActivity {
                 R.id.quantity_text_view);
         quantityTextView.setText("" + number);}
 
-        private void displayPrice(int number)
+    /**
+      *This method prints the total cost on the screen
+     */
+
+    private void displayPrice(int number)
     {
         TextView priceTextview=(TextView)findViewById(R.id.price_text_view);
         priceTextview.setText(NumberFormat.getCurrencyInstance().format(number));
     }
-
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
+    }
     }
 

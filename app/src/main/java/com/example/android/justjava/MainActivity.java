@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayMessage("Total Cost: " + "Rs. " + (quantity*5) + "\n\nFucking Pay The Fucking Price And Fucking Leave!! I'm not your Fucking Servant, Fucking Dickhead... -_- \n\nThugLife™");}
+        displayMessage("Total Cost: " + "Rs. " + (quantity*5) + "\n\nThanx :) ");}
 
     public void increment(View view) {
         quantity++;

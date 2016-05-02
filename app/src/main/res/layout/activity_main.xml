@@ -21,6 +21,7 @@
         android:layout_height = "wrap_content"
         android:orientation = "vertical"
         android:layout_gravity="center"
+        android:layout_marginRight="15dp"
         tools:context = "com.example.android.justjava.MainActivity">
 
 
@@ -100,19 +101,26 @@
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:orientation = "vertical"
-            android:layout_gravity="center_horizontal"
-            android:paddingRight="10dp"
-            android:layout_marginLeft="15dp"
+            android:paddingRight="30dp"
+            android:layout_marginLeft="20dp"
             tools:context = "com.example.android.justjava.MainActivity">
+
+            <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:tools = "http://schemas.android.com/tools"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:orientation = "vertical"
+                android:layout_gravity="center"
+                tools:context = "com.example.android.justjava.MainActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rs. 0 \n\nWelcome MotherFucker, \n Have your coffee, Pay your share and Leave"
+        android:text="Rs. 0 \n\nWelcome"
         android:textSize = "13sp"
         android:id="@+id/price_text_view"
-        android:layout_gravity="center"
         android:textColor = "@android:color/black"
         android:paddingTop="16dp"/>
+                </LinearLayout>
 
         </LinearLayout>
         </LinearLayout>

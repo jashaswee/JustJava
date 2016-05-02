@@ -103,6 +103,7 @@
             android:orientation = "vertical"
             android:paddingRight="30dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
             tools:context = "com.example.android.justjava.MainActivity">
 
             <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
@@ -134,7 +135,8 @@
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:orientation = "vertical"
-        android:layout_marginTop = "30dp"
+        android:layout_marginTop = "160dp"
+        android:layout_marginLeft="10dp"
         tools:context = "com.example.android.justjava.MainActivity">
 
         <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"

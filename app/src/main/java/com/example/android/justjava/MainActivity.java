@@ -37,6 +37,12 @@ public class MainActivity extends ActionBarActivity {
         display(quantity);
     }
 
+    public void reset(View view) {
+        quantity=0;
+        display(quantity);
+        displayMessage("Bitch u r damned !! All resetted to their original fucking states :3 ThugLife™ ");
+    }
+
 
     /**
      * This method displays the given quantity value on the screen.

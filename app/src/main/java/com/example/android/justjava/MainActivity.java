@@ -3,6 +3,7 @@ package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -19,13 +20,18 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayMessage("Total Cost: " + "Rs. " + (quantity*5) + "\n\nThanx :) ");}
+       int price=calculatePrice();
+        CheckBox cb=(CheckBox)findViewById(R.id.checkbox_view) ;
+        Boolean b=cb.isChecked();
+       displayMessage(orderSummary(price,b));
+    }
 
     public void increment(View view) {
         quantity++;
@@ -44,6 +50,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+public String orderSummary(int price, boolean boo)
+{
+    String s="Name: " + "Anonymous" +"\nHas Whipped Cream ? " + boo + "\nQuantity: " + quantity + "\nTotal: " + price +"\nThankYou";
+    return s;
+
+
+}
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -53,20 +66,32 @@ public class MainActivity extends ActionBarActivity {
         quantityTextView.setText("" + number);}
 
     /**
+     * This method displays the price calculated.
+     *
+     */
+    private int calculatePrice()
+    {
+        int price = quantity * 5;
+        return price;
+
+    }
+
+    /**
       *This method prints the total cost on the screen
      */
 
     private void displayPrice(int number)
     {
-        TextView priceTextview=(TextView)findViewById(R.id.price_text_view);
-        priceTextview.setText(NumberFormat.getCurrencyInstance().format(number));
+        TextView orderSummaryTextView=(TextView)findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+    
     /**
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
     }
 
